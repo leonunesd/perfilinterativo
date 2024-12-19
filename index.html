@@ -24,6 +24,7 @@
                 <button class="btn btn-primary me-2" onclick="alterarNome()">Alterar Nome</button>
                 <button class="btn btn-success me-2" onclick="adicionarHobby()">Adicionar Hobby</button>
                 <button class="btn btn-warning me-2" onclick="mudarCorDeFundo()">Mudar Cor de Fundo</button>
+                <button class="btn btn-primary me-2" onclick="mudarFoto()">Mudar Foto</button>
             </div>
         </div>
     </div>
@@ -70,6 +71,13 @@
             const corAleatoria = cores[Math.floor(Math.random() * cores.length)];
             document.getElementById("ProfileCard").style.backgroundColor = corAleatoria;
         }
+         function mudarFoto(){
+                const novaFoto = prompt("Digite o URL da nova Foto: ");
+                if(novaFoto){
+                     document.getElementById("profileImage").src = novaFoto;
+
+                }
+         }
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap.bundle.min.js"></script>
